@@ -3,9 +3,13 @@
 
 Untis Stundenplan Push über Telegram Bot
 
+
 Dieser Bot fragt regelmäßig über einen Cronjob den aktuellen Stundenplan deiner Klasse ab und vergleicht ihn auf Veränderungen.
+
 Dafür werden wird der Stundenplan bei einer Änderung auf *aktuell.html* und *aktuell.ics* gespeichert.
+
 Wenn der aktuelle Stundenplan eine Änderung aufweist wird über Telegram eine Nachricht (Push) an die angegebene Chat-ID gesendet.
+
 
 > Der Bot ist zurzeit alles andere als Effizient, da er jede Minute den Kalender abfragt/runterlädt!
 
@@ -23,7 +27,8 @@ Wenn der aktuelle Stundenplan eine Änderung aufweist wird über Telegram eine N
 5. Fertig!
 
 ### Cronjobs (beispiel)
-Jede Minute von 6-15 Uhr von Mo-Fr 
+Jede Minute von 6-15 Uhr von Mo-Fr.
+
 Einmal jede Stunde jeden Tag.
 ```
 #m	h	dom	mon	dow	command
