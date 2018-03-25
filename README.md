@@ -1,7 +1,7 @@
 # Untis-Stundenplan-Push
 ![Untis Stundenplan Push](https://firatcan.de/untis/logo.png)
 
-Untis Stundenplan Push über Telegram Bot
+**Untis Stundenplan Push über Telegram Bot**
 
 
 Dieser Bot fragt regelmäßig über einen Cronjob den aktuellen Stundenplan deiner Klasse ab und vergleicht ihn auf Veränderungen.
