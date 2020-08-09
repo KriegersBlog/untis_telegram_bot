@@ -1,23 +1,23 @@
-# Untis-Stundenplan-Push
+# Untis-Telegram-Bot
 ![Untis Stundenplan Push](https://firatcan.de/untis/logo.png)
 
-**Untis Stundenplan Push über Telegram Bot**
+**Benachrichtigungsbot für Stundenplanänderungen**
 
 
-Dieser Bot fragt regelmäßig über einen Cronjob den aktuellen Stundenplan deiner Klasse ab und vergleicht ihn auf Veränderungen.
+Dieser Bot fragt regelmäßig über einen *Cronjob* den aktuellen Stundenplan einer Untis-Klasse ab und vergleicht ihn auf Veränderungen.
 
-Dafür werden wird der Stundenplan bei einer Änderung auf *aktuell.html* und *aktuell.ics* gespeichert.
+Dafür wird der Stundenplan bei einer Änderung auf *aktuell.html* und *aktuell.ics* gespeichert.
 
-Wenn der aktuelle Stundenplan eine Änderung aufweist wird über Telegram eine Nachricht (Push) an die angegebene Chat-ID gesendet.
+Wenn der aktuelle Stundenplan eine Änderung aufweist wird über einen Telegram-Bot eine Nachricht (z.B. Pushnachricht) an die angegebene Chat-ID gesendet.
 
 
-> Der Bot ist zurzeit alles andere als Effizient, da er jede Minute den Kalender abfragt/runterlädt!
+> Der Bot ist zurzeit alles andere als effizient, da er jede Minute den Kalender abfragt/runterlädt!
 
 ## Was wird benötigt?
-* PHP *(ich nutze PHP-7)*
+* PHP *(ich nutze PHP7)*
 * [iCalReader *(class.iCalReader.php)*](https://github.com/MartinThoma/ics-parser)
 * [Telegram Bot](https://core.telegram.org/bots/api)
-* Cronjobs
+* [Cronjobs](https://de.wikipedia.org/wiki/Cron)
 
 ## Einrichtung / Installation
 1. Die Dateien der Repository in ein Web-Verzeichnis kopieren.
