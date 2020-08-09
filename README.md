@@ -1,5 +1,4 @@
 # Untis-Telegram-Bot
-![Untis Stundenplan Push](https://firatcan.de/untis/logo.png)
 
 **Benachrichtigungsbot für Stundenplanänderungen**
 
@@ -21,7 +20,7 @@ Wenn der aktuelle Stundenplan eine Änderung aufweist wird über einen Telegram-
 
 ## Einrichtung / Installation
 1. Die Dateien der Repository in ein Web-Verzeichnis kopieren.
-2. Token, ChatID, Schulname-Cookie usw in der ```index.php``` eintragen. 
+2. Token, ChatID, Schulname-Cookie usw. in der ```index.php``` und ```config.php``` eintragen. 
 3. ```chmod 777 aktuell.html && aktuell.ics ``` ausführen.
 4. Cronjobs einrichten.
 5. Fertig!
