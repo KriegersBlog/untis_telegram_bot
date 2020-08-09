@@ -2,25 +2,20 @@
 error_reporting(0);
 @ini_set('display_errors', 0);
 $test = 0;
-/*
-*
-* Dateien Laden
-*
-*/
+
+
+/***** Loading required files *****/
 require_once "config.php";
 require_once "sessionid.php";
 require_once 'class.iCalReader.php';
 
-  $jsessionid = getUntisSessionId($SCHOOL, $USERNAME, $PASSWORD, $schoolname);
+$jsessionid = getUntisSessionId($SCHOOL, $USERNAME, $PASSWORD, $schoolname);
 
 
+/***** Variables *****/
 
-/*
-*
-* Variablen
-*
-*/
 $chatIDBeta = "-321776818";
+
 if (date("H") < 3) {
     $chatID = "-321776818";
 // sendMessage($chatID, "Vor 3 Uhr..", $token); // Neuerungsnachricht senden
@@ -28,6 +23,7 @@ if (date("H") < 3) {
 //                             Firat          UntisGruppe   BetaGruppe   Kanal
 $chatID = "-1001387700422"; // 531912939     -134359323    -321776818   -1001387700422
 }
+
 switch ($chatID)
 {
     case '531912939':
@@ -46,6 +42,7 @@ switch ($chatID)
         echo "Empfänger: Fehler\n<br>";
         break;
 }
+
 // TEST
 #error_reporting(1);ini_set('display_errors', 1);$chatID = "-321776818";$test = 1;
 
@@ -54,13 +51,12 @@ $wochentag = date('N');
 
 $url = iCalURL($ICAL_ELEMTYPE, $ICAL_ELEMID, $ICAL_DATE); // Die URL zum Kalender früher elemID 449
 
-/*
-*
-* Telegram Code
-*
-*/
-function sendMessage($chatID, $messaggio, $token)
-{ // Nachricht senden
+
+
+/***** Telegram Coding *****/
+
+function sendMessage($chatID, $messaggio, $token) { // Nachricht senden
+
     $url = "https://firatcan.de/untis/senden/?parsemode=markdown&submit=Senden&chatid=" . $chatID;
     $url = $url . "&nachricht=" . urlencode($messaggio);
 
@@ -97,11 +93,13 @@ function sendImage($chatID, $messaggio, $token)
   
     echo "Bild '$messaggio' gesendet an " . $chatID . "\n"; // Info die auf der Website ausgegeben wird.(optional)
 }
+
 /*
 *
 * Setzen der Sprache und Zeitzone (optional)
 *
 */
+
 date_default_timezone_set('Europe/Berlin');
 setlocale(LC_TIME, array(
     'de_DE.UTF-8',
